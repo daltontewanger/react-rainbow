@@ -3,16 +3,7 @@ import ColorBlock from "./Components/ColorBlock";
 import ColorForm from "./Components/ColorForm";
 
 function App() {
-  const [colors, setColors] = useState([
-    "violet",
-    "blue",
-    "lightblue",
-    "green",
-    "greenyellow",
-    "yellow",
-    "orange",
-    "red",
-  ]);
+  const [colors, setColors] = useState([]);
 
   const addColor = (newColor) => {
     setColors([...colors, newColor])
@@ -23,7 +14,8 @@ function App() {
   });
 
   return (
-  <div className="App">
+  <div className="App centered-content">
+    <h1>Create Your Own Rainbow!</h1>
     {colorMap}
   <ColorForm addColor={addColor}/>
   </div>
